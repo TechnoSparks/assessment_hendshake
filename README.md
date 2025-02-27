@@ -4,11 +4,18 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/repo-name.git
+git clone https://github.com/TechnoSparks/assessment_hendshake.git
 cd repo-name
 ```
 
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
 
+3. Run the dev environment
 ```bash
 npm run dev
 # or
