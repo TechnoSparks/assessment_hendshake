@@ -3,6 +3,14 @@
 import React, { useState, useEffect } from 'react';
 
 function TodoList() {
+  // init some states
+  const [activities, setActivities] = useState([]);
+  const [activity, setActivity] = useState('');
+  const [price, setPrice] = useState(0);
+  const [type, setType] = useState('education');
+  const [bookingRequired, setBookingRequired] = useState(false);
+  const [accessibility, setAccessibility] = useState(0.5);
+
   return (
     <div>
       <h1>To-Do List ()</h1>
@@ -50,6 +58,9 @@ function TodoList() {
         />
         <button type="submit">Add Activity</button>
       </form>
+      <ul>
+
+      </ul>
     </div>
   )
 }
