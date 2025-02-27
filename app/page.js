@@ -70,7 +70,7 @@ function TodoList() {
           <option value="education">Education</option>
           <option value="recreational">Recreational</option>
           <option value="social">Social</option>
-          <option value="dly">DIY</option>
+          <option value="diy">DIY</option>
           <option value="charity">Charity</option>
           <option value="cooking">Cooking</option>
           <option value="relaxation">Relaxation</option>
