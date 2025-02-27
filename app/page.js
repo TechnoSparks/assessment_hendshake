@@ -96,7 +96,12 @@ function TodoList() {
         <button type="submit">Add Activity</button>
       </form>
       <ul>
-
+        { activities.map((item, index) => (
+          <li key={index}>
+            {item.activity} | RM{item.price} | {item.type} | {item.bookingRequired ? 'Booking Required' : 'No Booking'} | Accessibility: {item.accessibility}
+            <button onClick={() => handleDelete(index)}>Delete</button>
+          </li>
+        ))}
       </ul>
     </div>
   )
