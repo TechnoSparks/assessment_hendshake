@@ -38,6 +38,11 @@ function TodoList() {
     setAccessibility(0.5);
   };
 
+  const handleDelete = (index) => {
+    const updatedActivities = activities.filter((_, i) => i !== index);
+    setActivities(updatedActivities);
+  }
+
   // save activities to storage
   useEffect(() => {
     localStorage.setItem('activities', JSON.stringify(activities));
