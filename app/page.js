@@ -93,7 +93,7 @@ function TodoList() {
           value={accessibility}
           onChange={(e) => setAccessibility(parseFloat(e.target.value))}
         />
-        <button type="submit">Add Activity</button>
+        <button className="btn btn-primary" type="submit">Add Activity</button>
       </form>
       <ul>
         { activities.map((item, index) => (
