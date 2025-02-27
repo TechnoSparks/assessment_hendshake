@@ -94,7 +94,9 @@ function TodoList() {
           />
           Booking Required
         </label>
-        <input
+        <p>
+          <span>Accessibility</span>
+          <input
           type="range"
           min="0"
           max="1"
@@ -102,7 +104,8 @@ function TodoList() {
           value={accessibility}
           onChange={(e) => setAccessibility(parseFloat(e.target.value))}
         />
-        <button className="btn btn-primary" type="submit">Add Activity</button>
+        </p>
+        <p><button className="btn btn-primary" type="submit">Add Activity</button></p>
       </form>
       <ul>
         {activities.map((item, index) => (
