@@ -19,7 +19,10 @@ function TodoList() {
     }
   }, []);
 
-  //
+  // save activities to storage
+  useEffect(() => {
+    localStorage.setItem('activities', JSON.stringify(activities));
+  }, [activities])
 
   return (
     <div>
