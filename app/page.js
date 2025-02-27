@@ -11,13 +11,15 @@ function TodoList() {
   const [bookingRequired, setBookingRequired] = useState(false);
   const [accessibility, setAccessibility] = useState(0.5);
 
-  // check if there is any saved activities in storage, load if YES
+  // load activities from storage
   useEffect(() => {
     const savedActivities = JSON.parse(localStorage.getItem('activities'));
     if (savedActivities) {
       setActivities(savedActivities);
     }
   }, []);
+
+  //
 
   return (
     <div>
