@@ -19,6 +19,25 @@ function TodoList() {
     }
   }, []);
 
+  // Submit button handler
+  const handleSubmit = (e) => {
+    e.preventDefault(); // prevent HTTP POST
+    const newActivity = {
+      activity,
+      price,
+      type,
+      bookingRequired,
+      accessibility,
+    }
+    // reset form to initial values
+    setActivities([...activities, newActivity]);
+    setActivity('');
+    setPrice(0);
+    setType('education');
+    setBookingRequired(false);
+    setAccessibility(0.5);
+  };
+
   // save activities to storage
   useEffect(() => {
     localStorage.setItem('activities', JSON.stringify(activities));
