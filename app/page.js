@@ -11,6 +11,14 @@ function TodoList() {
   const [bookingRequired, setBookingRequired] = useState(false);
   const [accessibility, setAccessibility] = useState(0.5);
 
+  // check if there is any saved activities in storage, load if YES
+  useEffect(() => {
+    const savedActivities = JSON.parse(localStorage.getItem('activities'));
+    if (savedActivities) {
+      setActivities(savedActivities);
+    }
+  }, []);
+
   return (
     <div>
       <h1>To-Do List ()</h1>
@@ -18,19 +26,19 @@ function TodoList() {
         <input
           type="text"
           value={activity}
-          onChange={}
+          onChange={ }
           placeholder="Activity"
           required
         />
         <input
           type="number"
           value={price}
-          onChange={}
+          onChange={ }
           placeholder="Price"
           required
         />
-        <select value={type} onChange={}>
-        <option value="education">Education</option>
+        <select value={type} onChange={ }>
+          <option value="education">Education</option>
           <option value="recreational">Recreational</option>
           <option value="social">Social</option>
           <option value="dly">DIY</option>
@@ -44,7 +52,7 @@ function TodoList() {
           <input
             type="checkbox"
             checked={bookingRequired}
-            onChange={}
+            onChange={ }
           />
           Booking Required
         </label>
@@ -54,7 +62,7 @@ function TodoList() {
           max="1"
           step="0.1"
           value={accessibility}
-          onChange={}
+          onChange={ }
         />
         <button type="submit">Add Activity</button>
       </form>
