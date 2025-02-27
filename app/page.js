@@ -19,6 +19,11 @@ function TodoList() {
     }
   }, []);
 
+  // save activities to storage
+  useEffect(() => {
+    localStorage.setItem('activities', JSON.stringify(activities));
+  }, [activities])
+
   // Submit button handler
   const handleSubmit = (e) => {
     e.preventDefault(); // prevent HTTP POST
@@ -42,11 +47,6 @@ function TodoList() {
     const updatedActivities = activities.filter((_, i) => i !== index);
     setActivities(updatedActivities);
   }
-
-  // save activities to storage
-  useEffect(() => {
-    localStorage.setItem('activities', JSON.stringify(activities));
-  }, [activities])
 
   return (
     <div>
