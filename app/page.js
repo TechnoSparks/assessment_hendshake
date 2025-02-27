@@ -55,18 +55,18 @@ function TodoList() {
         <input
           type="text"
           value={activity}
-          onChange={ }
+          onChange={(e) => setActivity(e.target.value)}
           placeholder="Activity"
           required
         />
         <input
           type="number"
           value={price}
-          onChange={ }
+          onChange={(e) => setPrice(parseFloat(e.target.value))}
           placeholder="Price"
           required
         />
-        <select value={type} onChange={ }>
+        <select value={type} onChange={(e) => setType(e.target.value)}>
           <option value="education">Education</option>
           <option value="recreational">Recreational</option>
           <option value="social">Social</option>
@@ -81,7 +81,7 @@ function TodoList() {
           <input
             type="checkbox"
             checked={bookingRequired}
-            onChange={ }
+            onChange={(e) => setBookingRequired(e.target.checked)}
           />
           Booking Required
         </label>
@@ -91,7 +91,7 @@ function TodoList() {
           max="1"
           step="0.1"
           value={accessibility}
-          onChange={ }
+          onChange={(e) => setAccessibility(parseFloat(e.target.value))}
         />
         <button type="submit">Add Activity</button>
       </form>
