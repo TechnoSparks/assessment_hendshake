@@ -52,31 +52,40 @@ function TodoList() {
     <div>
       <h1>To-Do List ({activities.length})</h1>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={activity}
-          onChange={(e) => setActivity(e.target.value)}
-          placeholder="Activity"
-          required
-        />
-        <input
-          type="number"
-          value={price}
-          onChange={(e) => setPrice(parseFloat(e.target.value))}
-          placeholder="Price"
-          required
-        />
-        <select value={type} onChange={(e) => setType(e.target.value)}>
-          <option value="education">Education</option>
-          <option value="recreational">Recreational</option>
-          <option value="social">Social</option>
-          <option value="diy">DIY</option>
-          <option value="charity">Charity</option>
-          <option value="cooking">Cooking</option>
-          <option value="relaxation">Relaxation</option>
-          <option value="music">Music</option>
-          <option value="busywork">Busywork</option>
-        </select>
+        <p>
+          <span>Activity Name</span>
+          <input
+            type="text"
+            value={activity}
+            onChange={(e) => setActivity(e.target.value)}
+            placeholder="Activity"
+            required
+          />
+        </p>
+        <p>
+          <span>Price</span>
+          <input
+            type="number"
+            value={price}
+            onChange={(e) => setPrice(parseFloat(e.target.value))}
+            placeholder="Price"
+            required
+          />
+        </p>
+        <p>
+          <span>Type</span>
+          <select value={type} onChange={(e) => setType(e.target.value)}>
+            <option value="education">Education</option>
+            <option value="recreational">Recreational</option>
+            <option value="social">Social</option>
+            <option value="diy">DIY</option>
+            <option value="charity">Charity</option>
+            <option value="cooking">Cooking</option>
+            <option value="relaxation">Relaxation</option>
+            <option value="music">Music</option>
+            <option value="busywork">Busywork</option>
+          </select>
+        </p>
         <label>
           <input
             type="checkbox"
@@ -96,7 +105,7 @@ function TodoList() {
         <button className="btn btn-primary" type="submit">Add Activity</button>
       </form>
       <ul>
-        { activities.map((item, index) => (
+        {activities.map((item, index) => (
           <li key={index}>
             {item.activity} | RM{item.price} | {item.type} | {item.bookingRequired ? 'Booking Required' : 'No Booking'} | Accessibility: {item.accessibility}
             <button onClick={() => handleDelete(index)}>Delete</button>
