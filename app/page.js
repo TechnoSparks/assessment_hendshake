@@ -95,7 +95,7 @@ function TodoList() {
           Booking Required
         </label>
         <p>
-          <span>Accessibility</span>
+          <span className='bg-red-500 text-white p-4'>Accessibility</span>
           <input
           type="range"
           min="0"
